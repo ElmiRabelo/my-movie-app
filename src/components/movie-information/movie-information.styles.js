@@ -6,21 +6,43 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+`;
 
-  &:first-child {
-    position: absolute;
-    top: 0;
-    left: 0;
+export const Topbar = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10%;
+  width: 100%;
+  background-color: #edf1f5;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+`;
+
+export const Bottombar = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 10%;
+`;
+
+export const StarContainer = styled.div`
+  display: flex;
+  width: 18px;
+  align-items: center;
+  img {
     width: 100%;
-    background-color: #333;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 5px;
+    margin-right: 5px;
   }
+`;
 
-  p {
-    padding: 10px;
-    font-size: 16px;
-    margin: 20px 0;
-  }
+export const Overview = styled.p`
+  padding: 10px;
+  font-size: 16px;
+  margin: 30px 0;
+  background-color: #fefefe;
 `;

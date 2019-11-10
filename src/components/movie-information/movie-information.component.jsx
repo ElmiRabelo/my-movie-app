@@ -1,16 +1,30 @@
 import React from "react";
 
-import { Container } from "./movie-information.styles";
+import StarIcon from "../../assets/icons/star.svg";
+import ButtonBar from "../button-bar/button-bar.component";
 
-const MovieInformation = ({ description, vote_average }) => (
+import {
+  Container,
+  Topbar,
+  Overview,
+  StarContainer,
+  Bottombar
+} from "./movie-information.styles";
+
+//responsavel por mostrar informações básicas como overview, nota, ano de lançamento.
+const MovieInformation = ({ description, vote_average, year }) => (
   <Container>
-    <div>
-      <strong>Nota: </strong> <strong>{vote_average}</strong>
-    </div>
-    <p>{description}</p>
-    <div>
-      <strong>+</strong> <strong>-</strong>
-    </div>
+    <Topbar>
+      <StarContainer>
+        <img src={StarIcon} alt="Star Icon" />
+        <strong>{vote_average}</strong>
+      </StarContainer>
+      <strong>{year}</strong>
+    </Topbar>
+    <Overview>{description}</Overview>
+    <Bottombar>
+      <ButtonBar />
+    </Bottombar>
   </Container>
 );
 

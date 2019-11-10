@@ -17,7 +17,7 @@ const MovieCard = props => {
         size={posterSizes.small}
         title="Harry Potter e a Pedra Filosofal"
       />
-      <MovieInformation description={desc} vote_average={7.5} />
+      <MovieInformation description={desc} vote_average={7.5} year={"2019"} />
     </Container>
   );
 };
