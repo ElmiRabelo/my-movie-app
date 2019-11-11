@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     height: 100vh;
-    background-color: #DDE4EC;
+    background-color: #6791a2;
   }
 
 `;

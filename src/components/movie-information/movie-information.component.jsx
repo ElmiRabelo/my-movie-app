@@ -12,7 +12,7 @@ import {
 } from "./movie-information.styles";
 
 //responsavel por mostrar informações básicas como overview, nota, ano de lançamento.
-const MovieInformation = ({ description, vote_average, year }) => (
+const MovieInformation = ({ overview, vote_average, year }) => (
   <Container>
     <Topbar>
       <StarContainer>
@@ -21,7 +21,7 @@ const MovieInformation = ({ description, vote_average, year }) => (
       </StarContainer>
       <strong>{year}</strong>
     </Topbar>
-    <Overview>{description}</Overview>
+    <Overview>{overview}</Overview>
     <Bottombar>
       <ButtonBar />
     </Bottombar>

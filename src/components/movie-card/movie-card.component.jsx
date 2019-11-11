@@ -7,17 +7,26 @@ import { posterSizes } from "../../utils/imageBase";
 
 import { Container } from "./movie-card.styles";
 
-const MovieCard = props => {
-  const desc =
-    "Harry Potter (Daniel Radcliffe) é um garoto órfão de 10 anos que vive infeliz com seus tios, os Dursley.";
+const MovieCard = ({
+  id,
+  poster_path,
+  overview,
+  vote_average,
+  title,
+  release_date
+}) => {
   return (
-    <Container>
+    <Container id={id}>
       <MoviePoster
-        posterUrl="\/qnw9610ojLT0jU3lMSZOAFttt1e.jpg"
+        posterUrl={poster_path}
         size={posterSizes.small}
-        title="Harry Potter e a Pedra Filosofal"
+        title={title}
       />
-      <MovieInformation description={desc} vote_average={7.5} year={"2019"} />
+      <MovieInformation
+        overview={overview}
+        vote_average={vote_average}
+        year={release_date}
+      />
     </Container>
   );
 };
