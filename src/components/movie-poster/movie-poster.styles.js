@@ -9,6 +9,8 @@ export const Container = styled.div`
   img {
     height: 100%;
     width: 100%;
+    min-width: 185px;
+    object-fit: cover;
   }
   & > div {
     position: absolute;

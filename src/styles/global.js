@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import colors from "./colors";
+
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -10,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     height: 100vh;
-    background-color: #6791a2;
+    background-color: ${colors.suplementar}
   }
 
 `;

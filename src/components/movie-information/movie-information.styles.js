@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
+import colors from "../../styles/colors";
+
 export const Container = styled.div`
   height: 265px;
-  background-color: #fff;
+  min-width: 200px;
+  background-color: ${colors.light};
   display: flex;
   flex-direction: column;
   position: relative;
@@ -17,7 +20,7 @@ export const Topbar = styled.div`
   justify-content: space-between;
   height: 10%;
   width: 100%;
-  background-color: #edf1f5;
+  background-color: ${colors.auxiliar};
   margin-bottom: 20px;
   padding: 5px 10px;
 `;
@@ -28,6 +31,7 @@ export const Bottombar = styled.div`
   right: 0;
   width: 100%;
   height: 10%;
+  background-color: ${colors.light};
 `;
 
 export const StarContainer = styled.div`
@@ -44,5 +48,4 @@ export const Overview = styled.p`
   padding: 10px;
   font-size: 16px;
   margin: 30px 0;
-  background-color: #fefefe;
 `;
