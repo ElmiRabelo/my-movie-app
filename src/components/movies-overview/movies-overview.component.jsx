@@ -1,6 +1,7 @@
 import React from "react";
 
 import MovieCard from "../movie-card/movie-card.component";
+import MovieInput from "../movie-input/movie-input.component";
 
 import api from "../../services/api";
 

@@ -11,8 +11,13 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    height: 100vh;
-    background-color: ${colors.suplementar}
+    height: 100%;
+    background-color: ${colors.suplementar};
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
   }
 
 `;

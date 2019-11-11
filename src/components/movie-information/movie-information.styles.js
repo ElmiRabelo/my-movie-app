@@ -31,7 +31,7 @@ export const Bottombar = styled.div`
   right: 0;
   width: 100%;
   height: 10%;
-  background-color: ${colors.light};
+  background-color: ${colors.auxiliar};
 `;
 
 export const StarContainer = styled.div`
@@ -46,6 +46,9 @@ export const StarContainer = styled.div`
 
 export const Overview = styled.p`
   padding: 10px;
-  font-size: 16px;
+  font-size: 13px;
   margin: 30px 0;
+  overflow-y: hidden;
+  text-align: justify;
+  text-justify: inter-word;
 `;
