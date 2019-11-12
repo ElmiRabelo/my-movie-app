@@ -1,45 +1,32 @@
 import React from "react";
 
-import MovieCard from "../movie-card/movie-card.component";
-import MovieInput from "../movie-input/movie-input.component";
+import { connect } from "react-redux";
 
-import api from "../../services/api";
+import MovieCard from "../movie-card/movie-card.component";
 
 import { Container } from "./movies-overview.styles";
 
 //Reponsavel por renderizar vários MovieCard provinientes do resultado de busca.
-class MoviesOverview extends React.Component {
-  state = {
-    movies: []
-  };
+const MoviesOverview = ({ movies }) => {
+  return (
+    <Container>
+      {movies.data.map(movie => (
+        <MovieCard
+          key={movie.id}
+          id={movie.id}
+          poster_path={movie.poster_path}
+          overview={movie.overview}
+          vote_average={movie.vote_average}
+          title={movie.title}
+          release_date={movie.release_date}
+        />
+      ))}
+    </Container>
+  );
+};
 
-  async componentDidMount() {
-    const response = await api
-      .get(
-        `/search/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&query=Harry+Potter&language=pt-BR`
-      )
-      .then(resp => resp.data.results);
-    this.setState({ movies: [...response] });
-  }
+const mapStateToProps = state => ({
+  movies: state.movies
+});
 
-  render() {
-    const { movies } = this.state;
-    return (
-      <Container>
-        {movies.map(movie => (
-          <MovieCard
-            key={movie.id}
-            id={movie.id}
-            poster_path={movie.poster_path}
-            overview={movie.overview}
-            vote_average={movie.vote_average}
-            title={movie.title}
-            release_date={movie.release_date}
-          />
-        ))}
-      </Container>
-    );
-  }
-}
-
-export default MoviesOverview;
+export default connect(mapStateToProps)(MoviesOverview);
