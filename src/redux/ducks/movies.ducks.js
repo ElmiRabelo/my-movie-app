@@ -17,7 +17,7 @@ export default function movies(state = INITIAL_STATE, action) {
     case Types.GET_REQUEST:
       return { ...state, loading: true };
     case Types.GET_SUCCESS:
-      return { ...state, loading: false, data: [...action.payload] };
+      return { ...state, loading: false, data: action.payload };
     case Types.ENTER_MOVIE_NAME:
       return { ...state, movieName: action.payload };
     default:
