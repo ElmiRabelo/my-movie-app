@@ -6,5 +6,6 @@ export const Container = styled.div`
   padding: 30px 0;
   grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
   justify-items: center;
+  height: 100%;
   width: 100%;
 `;

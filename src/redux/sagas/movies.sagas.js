@@ -10,6 +10,7 @@ export default function* getMovies(action) {
       api.get,
       `/search/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&query=${movieName}&language=pt-BR&region=BR`
     );
+    //Filtra e retorna somente os filmes que tiverem sinopse
     const movieData = yield response.data.results.filter(
       movie => movie.overview
     );

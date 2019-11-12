@@ -16,6 +16,7 @@ export const Container = styled.div`
   background-position: bottom;
   background-repeat: no-repeat;
   padding: 30px;
+  box-shadow: 0 3px 15px rgba(05, 05, 20, 0.9);
   form {
     width: 50%;
     height: ${props => props.formHeight};
