@@ -5,10 +5,10 @@ import { Creators as MoviesActions } from "../ducks/movies.ducks";
 
 export default function* getMovies(action) {
   try {
-    const movieName = action.payload;
+    const movieName = action.payload.inputValue;
     const response = yield call(
       api.get,
-      `/search/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&query=${movieName}&language=pt-BR&region=BR`
+      `/search/${action.payload.typeSearch}?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&query=${movieName}&language=pt-BR&region=BR`
     );
     //Filtra e retorna somente os filmes que tiverem sinopse
     const movieData = yield response.data.results.filter(

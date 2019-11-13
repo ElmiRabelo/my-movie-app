@@ -30,7 +30,7 @@ const MoviesOverview = ({ movies }) => {
     content = <Container></Container>;
   }
   return (
-    <Fragment>{movies.loading ? <Loading width="150px" /> : content}</Fragment>
+    <Fragment>{movies.loading ? <Loading width="100px" /> : content}</Fragment>
   );
 };
 
