@@ -1,6 +1,7 @@
 export const Types = {
   GET_REQUEST: "movies/GET_REQUEST",
-  GET_SUCCESS: "movies/GET_SUCCESS"
+  GET_SUCCESS: "movies/GET_SUCCESS",
+  GET_ERROR: "movies/GET_ERROR"
 };
 
 const INITIAL_STATE = {
@@ -15,7 +16,14 @@ export default function movies(state = INITIAL_STATE, action) {
     case Types.GET_REQUEST:
       return { ...state, loading: true };
     case Types.GET_SUCCESS:
-      return { ...state, loading: false, data: action.payload };
+      return { ...state, loading: false, error: false, data: action.payload };
+    case Types.GET_ERROR:
+      return {
+        ...state,
+        error: true,
+        loading: false,
+        errorMsg: action.payload
+      };
     default:
       return state;
   }
@@ -23,5 +31,6 @@ export default function movies(state = INITIAL_STATE, action) {
 
 export const Creators = {
   getRequest: payload => ({ type: Types.GET_REQUEST, payload }),
-  getSuccess: payload => ({ type: Types.GET_SUCCESS, payload })
+  getSuccess: payload => ({ type: Types.GET_SUCCESS, payload }),
+  getError: payload => ({ type: Types.GET_ERROR, payload })
 };
