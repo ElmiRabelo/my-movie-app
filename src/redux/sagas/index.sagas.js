@@ -1,9 +1,9 @@
 import { all, takeLatest } from "redux-saga/effects";
 
-import { Types as MoviesTypes } from "../ducks/movies.ducks";
+import { Types as MidiaTypes } from "../ducks/midia.ducks";
 
-import getMovies from "./movies.sagas";
+import getMidia from "./midia.sagas";
 
 export default function* rootSaga() {
-  yield all([takeLatest(MoviesTypes.GET_REQUEST, getMovies)]);
+  yield all([takeLatest(MidiaTypes.GET_REQUEST, getMidia)]);
 }

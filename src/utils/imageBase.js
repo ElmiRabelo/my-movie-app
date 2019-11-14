@@ -18,3 +18,8 @@ export const posterSizes = {
   extraLarge: "w780",
   orignal: "original"
 };
+
+//obter imagem combinando informações das apis
+export const getImage = (baseUrl = baseImgUrl, size, imageUrl) => {
+  return `${baseUrl + size + imageUrl}`;
+};

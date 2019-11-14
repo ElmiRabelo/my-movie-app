@@ -3,10 +3,10 @@ export const colors = {
   dark: "#333",
   darker: "#000",
   light: "#edf2f4",
-  suplementar: "#6791a2",
-  auxiliar: "#005fb1",
-  primary: "#0074d8",
-  secondary: "#00203b",
+  suplementar: "#8589bd",
+  auxiliar: "#9a5cb0",
+  primary: "#303c96",
+  secondary: "#350745",
   error: "#D72426"
 };
 

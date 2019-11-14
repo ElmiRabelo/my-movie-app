@@ -1,21 +1,22 @@
 import React from "react";
 
-import MoviesOverview from "../../components/movies-overview/movies-overview.component";
+import MidiaOverview from "../../components/midia-overview/midia-overview.component";
 import SearchForm from "../../components/search-form/search-form.component";
 
-import { Container } from "./Search.styles";
+import { Container } from "./SearchMovie.styles";
 
-const SearchPage = () => {
+const SearchMovie = () => {
   return (
     <Container>
       <SearchForm
         title="Navegue por uma infinidade de filmes."
         formHeight="50px"
         height="400px"
+        searchFor="movie"
       />
-      <MoviesOverview />
+      <MidiaOverview />
     </Container>
   );
 };
 
-export default SearchPage;
+export default SearchMovie;

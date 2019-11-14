@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import SearchPage from "./pages/Search/Search.page";
+import SearchMovie from "./pages/Search/SearchMovie.page";
 
 import { GlobalStyle } from "./styles/global";
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <Fragment>
       <GlobalStyle />
-      <SearchPage />
+      <SearchMovie />
     </Fragment>
   );
 }

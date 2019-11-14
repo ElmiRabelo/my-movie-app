@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import StarIcon from "../../assets/icons/star.svg";
 import ButtonBar from "../button-bar/button-bar.component";
@@ -9,10 +10,10 @@ import {
   Overview,
   StarContainer,
   Bottombar
-} from "./movie-information.styles";
+} from "./midia-information.styles";
 
 //responsavel por mostrar informações básicas como overview, nota, ano de lançamento.
-const MovieInformation = ({ overview, vote_average, year }) => (
+const MidiaInformation = ({ overview, vote_average, year }) => (
   <Container>
     <Topbar>
       <StarContainer>
@@ -28,4 +29,10 @@ const MovieInformation = ({ overview, vote_average, year }) => (
   </Container>
 );
 
-export default MovieInformation;
+MidiaInformation.propTypes = {
+  overview: PropTypes.string.isRequired,
+  vote_average: PropTypes.number.isRequired,
+  year: PropTypes.string.isRequired
+};
+
+export default MidiaInformation;

@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
-import movies from "./movies.ducks";
+import midia from "./midia.ducks";
 import error from "./error.ducks";
 
 export default combineReducers({
-  movies,
+  midia,
   error
 });
