@@ -1,6 +1,7 @@
 export const Types = {
-  GET_REQUEST: "movies/GET_REQUEST",
-  GET_SUCCESS: "movies/GET_SUCCESS"
+  GET_REQUEST: "midia/GET_REQUEST",
+  GET_SUCCESS: "midia/GET_SUCCESS",
+  GET_ERROR: "midia/GET_ERROR"
 };
 
 const INITIAL_STATE = {
@@ -13,7 +14,9 @@ export default function midia(state = INITIAL_STATE, action) {
     case Types.GET_REQUEST:
       return { ...state, loading: true };
     case Types.GET_SUCCESS:
-      return { ...state, loading: false, error: false, data: action.payload };
+      return { ...state, loading: false, data: action.payload };
+    case Types.GET_ERROR:
+      return { ...state, loading: false };
     default:
       return state;
   }
@@ -21,5 +24,6 @@ export default function midia(state = INITIAL_STATE, action) {
 
 export const Creators = {
   getRequest: payload => ({ type: Types.GET_REQUEST, payload }),
-  getSuccess: payload => ({ type: Types.GET_SUCCESS, payload })
+  getSuccess: payload => ({ type: Types.GET_SUCCESS, payload }),
+  getError: () => ({ type: Types.GET_ERROR })
 };
